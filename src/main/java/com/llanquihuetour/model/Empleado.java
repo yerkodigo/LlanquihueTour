@@ -2,18 +2,35 @@ package com.llanquihuetour.model;
 
 import java.time.LocalDate;
 
+/**
+ * Representa a un empleado de la agencia Llanquihue Tour.
+ * Extiende de Persona agregando los datos propios del cargo.
+ */
 public class Empleado extends Persona {
+    // Identificador único del empleado dentro de la agencia
     private int numeroEmpleado;
+
+    // Fecha en que el empleado ingresó a trabajar - Investigué un poco y encontré LocalDate en versiones
+    // de java más modernas para usar fechas, ya que anteriormente solo había trabajado con Date.
     private LocalDate fechaIngreso;
+
+    // Indica si el empleado sigue activo (true) o fue dado de baja (false)
     private Boolean vigente;
+
+    // Dirección de residencia del empleado
     private Direccion direccion;
 
     public Empleado() {
         super();
     }
 
-
-
+    /**
+     * Constructor parcial, para cuando los datos personales se asignan por separado con setters.
+     * @param numeroEmpleado identificador del empleado
+     * @param fechaIngreso   fecha de ingreso a la empresa.
+     * @param vigente        si está activo o no
+     * @param direccion      dirección de residencia
+     */
     public Empleado(int numeroEmpleado, LocalDate fechaIngreso, Boolean vigente, Direccion direccion) {
         this.numeroEmpleado = numeroEmpleado;
         this.fechaIngreso = fechaIngreso;
@@ -21,6 +38,17 @@ public class Empleado extends Persona {
         this.direccion = direccion;
     }
 
+    /**
+     * Constructor completo para crear un empleado con todos sus datos de una vez.
+     * @param nombre         nombre de pila
+     * @param apellido       apellido
+     * @param edad           edad en años
+     * @param genero         género
+     * @param numeroEmpleado número identificador del empleado
+     * @param fechaIngreso   fecha en que comenzó a trabajar
+     * @param vigente        si está activo o no
+     * @param direccion      dirección de residencia
+     */
     public Empleado(String nombre, String apellido, int edad, String genero, int numeroEmpleado, LocalDate fechaIngreso, Boolean vigente, Direccion direccion) {
         super(nombre, apellido, edad, genero);
         this.numeroEmpleado = numeroEmpleado;
