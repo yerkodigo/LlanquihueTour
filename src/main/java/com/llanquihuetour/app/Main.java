@@ -18,8 +18,8 @@ public class Main {
         empleado1.setEdad(28);
         empleado1.setGenero("Masculino");
 
-        Direccion direccion2 = new Direccion("Los alerces", 987, "Santiago", "Maipu");
-        Empleado empleado2 = new Empleado("Javiera", "Arancibia", 25, "Femenino", 1234, LocalDate.of(2022, Month.AUGUST, 1), true, direccion2);
+        Direccion direccion2 = new Direccion("Himno Nacional", 888, "Santiago", "Pudahuel");
+        Empleado empleado2 = new Empleado("Javiera", "Arancibia", 25, "Femenino", 8737, LocalDate.of(2022, Month.AUGUST, 1), true, direccion2);
 
         System.out.println(empleado1.toString());
         System.out.println(empleado2.toString());
