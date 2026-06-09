@@ -19,7 +19,7 @@ public class Main {
         empleado1.setGenero("Masculino");
 
         Direccion direccion2 = new Direccion("Los alerces", 987, "Santiago", "Maipu");
-        Empleado empleado2 = new Empleado( "Javiera", "Arancibia", 25, "Femenino", 1234, LocalDate.of(2022, Month.AUGUST, 1), true, direccion1);
+        Empleado empleado2 = new Empleado("Javiera", "Arancibia", 25, "Femenino", 1234, LocalDate.of(2022, Month.AUGUST, 1), true, direccion2);
 
         System.out.println(empleado1.toString());
         System.out.println(empleado2.toString());
